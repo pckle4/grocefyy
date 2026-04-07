@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 204 30% 55%;
+    --foreground: 210 20% 98%;
+
+    --card: 204 25% 48%;
+    --card-foreground: 48 100% 97%;
+
+    --popover: 204 28% 50%;
+    --popover-foreground: 48 100% 97%;
+
+    --primary: 48 100% 91%;
+    --primary-foreground: 204 35% 30%;
+
+    --secondary: 204 20% 42%;
+    --secondary-foreground: 48 100% 97%;
+
+    --muted: 204 20% 45%;
+    --muted-foreground: 204 15% 80%;
+
+    --accent: 48 100% 91%;
+    --accent-foreground: 204 35% 30%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 204 20% 60%;
+    --input: 204 20% 58%;
+    --ring: 48 100% 91%;
+
+    --radius: 0.75rem;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --sidebar-background: 204 30% 40%;
+    --sidebar-foreground: 48 100% 97%;
+    --sidebar-primary: 48 100% 91%;
+    --sidebar-primary-foreground: 204 35% 30%;
+    --sidebar-accent: 204 25% 45%;
+    --sidebar-accent-foreground: 48 100% 97%;
+    --sidebar-border: 204 20% 50%;
+    --sidebar-ring: 48 100% 91%;
+
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/60 backdrop-blur-xl border border-border/30 shadow-lg;
+  }
+  .glass-hover {
+    @apply hover:bg-card/80 transition-all duration-300;
+  }
+  .cream-glow {
+    box-shadow: 0 0 20px hsl(48 100% 91% / 0.15);
+  }
+}
